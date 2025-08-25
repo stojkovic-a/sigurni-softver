@@ -1,0 +1,28 @@
+syntax="proto3";
+
+package authorization;
+
+option go_package="protos/auth;authorization";
+
+service AuthorizationService{
+    rpc TestFunction(TestMessage) returns (TestReply);
+    rpc ValidateToken(TokenRequest) returns (TokenValidationReply);
+}
+
+message TestMessage{
+    string testField=1;
+}
+
+message TestReply{
+    repeated int32 otherGield=1;
+}
+
+message TokenRequest{
+    string token=1;
+}
+
+message TokenValidationReply{
+    bool isValid=1;
+    optional string error=2;
+    map<string,string>claims=3;
+}

@@ -1,0 +1,15 @@
+syntax="proto3";
+
+package auth;
+
+service AuthService{
+    rpc TestFunction(TestMessage) returns (TestReply);
+}
+
+message TestMessage{
+    string testField=1;
+}
+
+message TestReply(
+    repeated int32 otherGield=1;
+)

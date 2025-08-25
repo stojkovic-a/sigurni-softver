@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  nats:
+    image: nats:latest
+    container_name: secure-nats
+    ports:
+      - "4222:4222"   
+      - "8222:8222"   
+    volumes:
+      - ./nats-server.conf:/nats-server.conf
+      - ./certs:/etc/nats-certs:ro
+    networks:
+      - ss
+
+networks:
+  ss:
+    external: true

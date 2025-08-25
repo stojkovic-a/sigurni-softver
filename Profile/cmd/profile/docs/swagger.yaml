@@ -1,0 +1,80 @@
+info:
+  contact: {}
+paths:
+  /internal/createProfile:
+    post:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+  /protected/addFriend:
+    post:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+  /protected/deleteProfile:
+    delete:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+  /protected/getProfileById:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+  /protected/getProfileByUsername/{username}:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+  /protected/test:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+  /protected/unfriend:
+    post:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+  /public/testPublic:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+securityDefinitions:
+  BearerAuth:
+    description: Type "Bearer" followed by a space and JWT token.
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

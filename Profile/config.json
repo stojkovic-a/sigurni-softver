@@ -1,0 +1,24 @@
+{
+    "API": {
+        "Server": "localhost",
+        "Port": 9998,
+        "Client_cert_key": "certs/go-client.key",
+        "Client_cert_crt": "certs/go-client.crt",
+        "Claims_role": "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+        "Claims_id": "sub",
+        "Authtentication_secret": "vsdgjsg76vdf342tnjc3t253884x30-cm4n1q0wc8b29x911nnbz91naqzcp2490235b4h-r392m5v8gn32fd43klgfwe2034537-5hmzxnjzqoxei8239y0hguvfvijwecmw"
+    },
+    "Grpc": {
+        "Server": "localhost",
+        "Port": 7147,
+        "Client_cert_key": "certs/go-client.key",
+        "Client_cert_crt": "certs/go-client.crt",
+        "Server_cert_ca": "certs/ca.crt"
+    },
+    "Neo4j": {
+        "DbUri": "neo4j+s://b46ea062.databases.neo4j.io",
+        "DbUser": "neo4j",
+        "DbPassword": "hMx1uxkFOuR195c8lXeN_pRa4y-5Drc3eutI6YbEvTg",
+        "DbName": "neo4j"
+    }
+}
