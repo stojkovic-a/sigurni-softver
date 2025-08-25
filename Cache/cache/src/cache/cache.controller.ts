@@ -27,18 +27,6 @@ export class CacheController {
     }
 
 
-    // @EventPattern('cache.*', Transport.NATS)
-    // async ReceiveTest(@Payload() data, @Ctx() context: NatsContext) {
-    //     try {
-    //         console.log("aaa");
-    //         console.log(data)
-    //         this.redisRepo.setWithExpiry("test", "testic", "test2", 10)
-
-    //     } catch (e) {
-    //         console.error(e);
-    //     }
-    // }
-
     @EventPattern(`cache.${Events[Events.STORE_EMAIL]}`, Transport.NATS)
     async MailStore(@Payload() data: Outbox, @Ctx() context: NatsContext) {
         try {
